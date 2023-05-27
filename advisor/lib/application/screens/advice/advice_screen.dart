@@ -1,3 +1,5 @@
+import 'package:advisor/application/screens/advice/widgets/app_bar/adviser_app_bar.dart';
+import 'package:advisor/application/screens/advice/widgets/body/body.dart';
 import 'package:flutter/material.dart';
 
 class AdviceScreen extends StatelessWidget {
@@ -5,6 +7,9 @@ class AdviceScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Scaffold(
+      appBar: AdviserAppBar(),
+      body: Body(),
+    );
   }
 }

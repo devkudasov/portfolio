@@ -1,3 +1,4 @@
+import 'package:advisor/application/screens/advice/advice_screen.dart';
 import 'package:advisor/theme.dart';
 import 'package:advisor/application/core/services/theme_service.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +24,7 @@ class Advisor extends StatelessWidget {
           themeMode: themeService.getTheme(),
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme,
-          home: const Placeholder(),
+          home: const AdviceScreen(),
         );
       },
     );
