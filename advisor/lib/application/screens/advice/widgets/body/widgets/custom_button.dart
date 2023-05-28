@@ -1,4 +1,6 @@
+import 'package:advisor/application/screens/advice/bloc/advicer_bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class CustomButon extends StatelessWidget {
   const CustomButon({super.key});
@@ -9,7 +11,7 @@ class CustomButon extends StatelessWidget {
 
     return InkResponse(
       onTap: () {
-        print('Button pressed');
+        BlocProvider.of<AdvicerBloc>(context).add(AdviceRequestedEvent());
       },
       child: Material(
         elevation: 20.0,

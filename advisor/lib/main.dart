@@ -24,7 +24,7 @@ class Advisor extends StatelessWidget {
           themeMode: themeService.getTheme(),
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme,
-          home: const AdviceScreen(),
+          home: const AdviceScreenWrapperProvider(),
         );
       },
     );
