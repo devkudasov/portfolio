@@ -1,4 +1,5 @@
 import 'package:advisor/application/screens/advice/bloc/advicer_bloc.dart';
+import 'package:advisor/application/screens/advice/cubit/adviser_cubit.dart';
 import 'package:advisor/application/screens/advice/widgets/app_bar/adviser_app_bar.dart';
 import 'package:advisor/application/screens/advice/widgets/body/body.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +11,7 @@ class AdviceScreenWrapperProvider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => AdvicerBloc(),
+      create: (context) => AdviserCubit(),
       child: const AdviceScreen(),
     );
   }

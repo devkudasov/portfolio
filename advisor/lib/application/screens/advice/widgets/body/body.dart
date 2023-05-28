@@ -1,4 +1,4 @@
-import 'package:advisor/application/screens/advice/bloc/advicer_bloc.dart';
+import 'package:advisor/application/screens/advice/cubit/adviser_cubit.dart';
 import 'package:advisor/application/screens/advice/widgets/body/widgets/advice_field.dart';
 import 'package:advisor/application/screens/advice/widgets/body/widgets/custom_button.dart';
 import 'package:advisor/application/screens/advice/widgets/body/widgets/error_message.dart';
@@ -20,7 +20,7 @@ class Body extends StatelessWidget {
         children: [
           Expanded(
             child: Center(
-              child: BlocBuilder<AdvicerBloc, AdvicerState>(
+              child: BlocBuilder<AdviserCubit, AdviserCubitState>(
                 builder: (context, state) {
                   if (state is AdvicerInitial) {
                     return const Greetings();
