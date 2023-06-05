@@ -11,7 +11,7 @@ class CustomButon extends StatelessWidget {
 
     return InkResponse(
       onTap: () {
-        BlocProvider.of<AdviserCubit>(context).AdviceRequested();
+        BlocProvider.of<AdviserCubit>(context).adviceRequested();
       },
       child: Material(
         elevation: 20.0,

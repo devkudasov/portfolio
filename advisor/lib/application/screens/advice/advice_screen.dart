@@ -1,4 +1,3 @@
-import 'package:advisor/application/screens/advice/bloc/advicer_bloc.dart';
 import 'package:advisor/application/screens/advice/cubit/adviser_cubit.dart';
 import 'package:advisor/application/screens/advice/widgets/app_bar/adviser_app_bar.dart';
 import 'package:advisor/application/screens/advice/widgets/body/body.dart';

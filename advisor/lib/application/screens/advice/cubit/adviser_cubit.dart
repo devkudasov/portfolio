@@ -6,7 +6,7 @@ part 'adviser_state.dart';
 class AdviserCubit extends Cubit<AdviserCubitState> {
   AdviserCubit() : super(AdvicerInitial());
 
-  void AdviceRequested() async {
+  void adviceRequested() async {
     emit(AdvicerStateLoading());
     await Future.delayed(
       const Duration(seconds: 3),
