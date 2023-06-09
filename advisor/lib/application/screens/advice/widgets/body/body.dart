@@ -32,8 +32,8 @@ class Body extends StatelessWidget {
                     return AdviceField(advice: state.advice);
                   }
                   if (state is AdvicerStateError) {
-                    return const ErrorMessage(
-                      message: 'Uuups something gone wrong!',
+                    return ErrorMessage(
+                      message: state.message,
                     );
                   }
 

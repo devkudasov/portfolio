@@ -1,15 +1,12 @@
+import 'package:advisor/data/repositories/advice_repo_impl.dart';
 import 'package:advisor/domain/entities/advice_entity.dart';
+import 'package:advisor/domain/failures/failures.dart';
+import 'package:dartz/dartz.dart';
 
 class AdviceUsecases {
-  Future<AdviceEntity> getAdvice() async {
-    await Future.delayed(
-      const Duration(seconds: 3),
-      () {},
-    );
+  final AdviceRepoImpl adviceRepo = AdviceRepoImpl();
 
-    return const AdviceEntity(
-      advice: 'Fake advice to test domain app area',
-      id: 1,
-    );
+  Future<Either<Failure, AdviceEntity>> getAdvice() async {
+    return adviceRepo.getAdviceFromDataSource();
   }
 }
